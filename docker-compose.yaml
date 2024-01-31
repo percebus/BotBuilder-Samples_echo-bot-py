@@ -2,6 +2,13 @@ version: "3.8"
 
 services:
   echo-bot:
-    build: .
+    build:
+      context: .
+      target: dev
+    network_mode: host
+    expose:
+      - "3978"
     ports:
-      - 3978:3978
+      - "3978:3978"
+    environment:
+      HOST: "0.0.0.0"

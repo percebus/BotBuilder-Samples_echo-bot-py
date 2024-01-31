@@ -10,7 +10,7 @@ import os
 class DefaultConfig:
     """ Bot Configuration """
 
-    HOST = "127.0.0.1"
-    PORT = 3978
+    HOST = os.environ.get("localhost")
+    PORT = int(os.environ.get("PORT", "3978"))
     APP_ID = os.environ.get("MicrosoftAppId", "")
     APP_PASSWORD = os.environ.get("MicrosoftAppPassword", "")
