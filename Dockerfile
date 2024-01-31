@@ -1,7 +1,7 @@
 FROM python:3.11.7 as base
 WORKDIR /usr/app
 COPY . .
-EXPOSE 3978
+EXPOSE 3978 3978
 
 FROM base as dev
 RUN pip install -r requirements.txt

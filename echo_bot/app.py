@@ -20,6 +20,7 @@ from echo_bot.bots import EchoBot
 from echo_bot.config import DefaultConfig
 
 CONFIG = DefaultConfig()
+print("Config:", CONFIG.HOST)
 
 # Create adapter.
 # See https://aka.ms/about-bot-adapter to learn more about how bots work.
@@ -86,7 +87,6 @@ APP.router.add_get("/health", health)
 APP.router.add_post("/api/messages", messages)
 
 def main():
-    print("Config:", CONFIG)
     web.run_app(APP, host=CONFIG.HOST, port=CONFIG.PORT)
 
 if __name__ == "__main__":

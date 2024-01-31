@@ -5,10 +5,11 @@ services:
     build:
       context: .
       target: dev
-    network_mode: host
     expose:
       - "3978"
     ports:
       - "3978:3978"
+    # env_file:
+    #   - .env.local
     environment:
-      HOST: ${HOST}
+      HOST: 0.0.0.0
