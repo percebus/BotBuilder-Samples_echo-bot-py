@@ -6,10 +6,10 @@ services:
       context: .
       target: dev
     expose:
-      - "3978"
+      - "${PORT}"
     ports:
-      - "3978:3978"
+      - "${PORT}:${PORT}"
     # env_file:
-    #   - .env.local
+    #   - .env.docker
     environment:
-      HOST: 0.0.0.0
+      HOST: "${HOST}"
