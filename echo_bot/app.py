@@ -77,7 +77,12 @@ async def messages(req: Request) -> Response:
     return Response(status=HTTPStatus.OK)
 
 
+async def health(req: Request) -> Response:
+    return Response(status=HTTPStatus.OK, content_type="text/html", text="OK")
+
+
 APP = web.Application(middlewares=[aiohttp_error_middleware])
+APP.router.add_get("/health", health)
 APP.router.add_post("/api/messages", messages)
 
 def main():

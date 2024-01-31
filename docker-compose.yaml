@@ -11,4 +11,4 @@ services:
     ports:
       - "3978:3978"
     environment:
-      HOST: "0.0.0.0"
+      HOST: ${HOST}
