@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker run -t echo-bot-py --network host -p 3789:3789
+docker run --network host -p 3789:3789 -t echo-bot-py
