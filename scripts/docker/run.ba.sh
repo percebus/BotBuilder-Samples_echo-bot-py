@@ -3,7 +3,7 @@
 set -e
 set -v
 
-docker run --network host -p 3798:3798 -t ${CONTAINER_REGISTRY_NAME}/${REPO_NAME}:latest
+docker run --network host -p 3798:3798 -t ${CONTAINER_REGISTRY_NAME}/${CONTAINER_IMAGE_NAME}:${CONTAINER_IMAGE_TAG}
 
 set +v
 set +e
