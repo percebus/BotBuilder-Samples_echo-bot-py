@@ -5,11 +5,20 @@ services:
     build:
       context: .
       target: dev
+
+    # Linux Only?
+    # SEE: https://stackoverflow.com/a/75233758/1361858
+    # network_mode: "host"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
     expose:
       - "${PORT}"
+
     ports:
       - "${PORT}:${PORT}"
-    # env_file:
-    #   - .env.docker
-    environment:
-      HOST: "${HOST}"
+
+    env_file:
+      - .env
+      # - .env.docker
+      # - .env.local
