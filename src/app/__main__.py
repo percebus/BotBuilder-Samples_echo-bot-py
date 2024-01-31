@@ -16,8 +16,8 @@ from botbuilder.integration.aiohttp import CloudAdapter, ConfigurationBotFramewo
 from botbuilder.schema import Activity, ActivityTypes
 from botbuilder.schema import Activity, ActivityTypes
 
-from echo_bot.bots import EchoBot
-from echo_bot.config import DefaultConfig
+from app.bots import EchoBot
+from app.config import DefaultConfig
 
 CONFIG = DefaultConfig()
 print("Config:", CONFIG.HOST)

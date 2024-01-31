@@ -1,8 +1,11 @@
 #!/bin/bash
 
-export CONTAINER_IMAGE_NAME='echo-bot-py'
+export PROJECT_NAME='echo-bot-py'
+export REPO_NAME='BotBuilder-Samples_echo-bot-py'
+
+export CONTAINER_IMAGE_NAME=${PROJECT_NAME}
 export CONTAINER_IMAGE_NAME=${CONTAINER_IMAGE_NAME}
-export CONTAINER_IMAGE_TAG="${CONTAINER_IMAGE_TAG}"
+export CONTAINER_IMAGE_TAG="latest"
 
 export CONTAINER_REGISTRY_NAME=FIXME
 export CONTAINER_REGISTRY_URL="${CONTAINER_REGISTRY_NAME}.azurecr.io"
